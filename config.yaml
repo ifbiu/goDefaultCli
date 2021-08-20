@@ -14,7 +14,12 @@ mysql:
   user: "root"
   password: ""
   dbname: "sql_test"
+  charset: "utf8mb4"
+  max_open_conns: 100
+  max_idle_conns: 10
 redis:
   host: "127.0.0.1"
   port: 16379
+  password: ""
   db: 0
+  pool_size: 100
