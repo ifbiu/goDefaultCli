@@ -15,7 +15,7 @@ func Init() (err error) {
 		Addr: fmt.Sprintf(
 			"%s:%d",
 			viper.GetString("redis.host"),
-			viper.GetString("redis.port"),
+			viper.GetInt("redis.port"),
 		),
 		Password: viper.GetString("redis.password"), // no password set
 		DB:       viper.GetInt("redis.db"),          // use default DB
@@ -27,4 +27,8 @@ func Init() (err error) {
 		return err
 	}
 	return nil
+}
+
+func Close() {
+	_ = rdb.Close()
 }
