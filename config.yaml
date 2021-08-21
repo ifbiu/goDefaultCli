@@ -2,6 +2,7 @@ app:
   name: "goDefaultCli"
   mode: "dev"
   port: 8080
+  version: "v0.0.1"
 log:
   level: "debug"
   filename: "go_default_cli.log"
